@@ -1,0 +1,43 @@
+[project]
+name = "courseworkproject"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "IvanPro91",email = "ivan-don4encko@ya.ru"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.group.lint.dependencies]
+mypy = "^1.15.0"
+flake8 = "^7.1.2"
+black = "^25.1.0"
+isort = "^6.0.1"
+
+
+[tool.black]
+line-length = 119
+exclude = '.git'
+
+
+[tool.isort]
+line-length = 119
+
+
+[tool.mypy]
+disallow_untyped_defs = true
+warn_return_any = true
+exclude = 'venv'
+
+
+[tool.poetry.group.dev.dependencies]
+python-dotenv = "^1.0.1"
+
