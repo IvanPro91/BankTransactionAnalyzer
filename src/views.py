@@ -1,5 +1,6 @@
 from src.utils import (
     currency_rates,
+    get_period_date,
     main_cards,
     read_finance_excel_operation,
     top_transactions,
@@ -14,7 +15,8 @@ def page_main(date: str) -> dict:
     :param date: Входящая дата.
     :return: Json объект содержащий информацию.
     """
-    struct_file_json = read_finance_excel_operation()
+    period_date = get_period_date(date)
+    struct_file_json = read_finance_excel_operation(period_date)
     json_response = {
         "greeting": welcome_text(date),
         "cards": main_cards(struct_file_json),
