@@ -8,6 +8,9 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "pytest (>=8.3.5,<9.0.0)",
+    "pandas-stubs (>=2.2.3.250308,<3.0.0.0)",
+    "types-requests (>=2.32.0.20250306,<3.0.0.0)"
 ]
 
 
@@ -29,7 +32,7 @@ exclude = '.git'
 
 
 [tool.isort]
-line-length = 119
+line_length = 119
 
 
 [tool.mypy]
@@ -40,4 +43,8 @@ exclude = 'venv'
 
 [tool.poetry.group.dev.dependencies]
 python-dotenv = "^1.0.1"
+pandas = "^2.2.3"
+openpyxl = "^3.1.5"
+requests = "^2.32.3"
+pytest-cov = "^6.0.0"
 
