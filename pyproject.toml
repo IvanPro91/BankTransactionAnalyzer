@@ -1,21 +1,16 @@
-[project]
-name = "courseworkproject"
+[tool.poetry]
+name = "banktransactionanalyzer"
 version = "0.1.0"
 description = ""
-authors = [
-    {name = "IvanPro91",email = "ivan-don4encko@ya.ru"}
-]
+authors = ["IvanPro91 <ivan-don4encko@yandex.ru>"]
 readme = "README.md"
-requires-python = ">=3.12"
-dependencies = [
-    "pytest (>=8.3.5,<9.0.0)",
-    "pandas-stubs (>=2.2.3.250308,<3.0.0.0)",
-    "types-requests (>=2.32.0.20250306,<3.0.0.0)"
-]
+
+[tool.poetry.dependencies]
+python = "^3.12"
 
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 
